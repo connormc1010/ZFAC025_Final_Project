@@ -1,4 +1,4 @@
-package com.zfac025Project.ProjectCode.VictimScripts;
+package com.zfac025Project.ProjectCode.VictimScriptTest;
 
 import static org.junit.Assert.assertTrue;
 
@@ -16,7 +16,7 @@ import com.zfac025Project.ProjectCode.GoogleChromeOperations;
  * Unit test for simulating a victims actions on a network
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class VictimScriptTest 
+public class SSHBruteForceTest 
 {
 	
 	static WebDriver driver;

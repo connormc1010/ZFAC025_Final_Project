@@ -11,8 +11,9 @@ public class GoogleChromeOperations extends GoogleChrome{
 		return true;
 	}
 	
-	public boolean clickElement(String xpath) {
+	public boolean clickElement(String xpath) throws InterruptedException {
 		driver.findElements(By.xpath(xpath)).get(0).click();
+		driver.wait(10);
 		return true;
 	}
 
