@@ -2,18 +2,15 @@ package com.zfac025Project.ProjectCode;
 
 import org.openqa.selenium.By;
 
-public class GoogleChromeOperations extends GoogleChrome{
+public class GoogleChromeOperations extends GoogleChrome {
 
-
-	public boolean getWebsite(String url) throws InterruptedException {
+	public boolean getWebsite(String url) {
 		driver.get(url);
-		driver.wait(10);
 		return true;
 	}
-	
-	public boolean clickElement(String xpath) throws InterruptedException {
+
+	public boolean clickElement(String xpath) {
 		driver.findElements(By.xpath(xpath)).get(0).click();
-		driver.wait(10);
 		return true;
 	}
 

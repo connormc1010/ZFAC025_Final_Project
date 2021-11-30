@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public abstract class GoogleChrome {
-	
+
 	public static WebDriver driver;
 
 	public static Boolean setUpDriver() {
