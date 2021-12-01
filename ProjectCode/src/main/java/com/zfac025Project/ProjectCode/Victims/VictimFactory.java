@@ -1,46 +1,50 @@
 package com.zfac025Project.ProjectCode.Victims;
 
-import com.zfac025Project.ProjectCode.Victims.VictimScripts.DOSVictim;
-import com.zfac025Project.ProjectCode.Victims.VictimScripts.MITMVictim;
-import com.zfac025Project.ProjectCode.Victims.VictimScripts.SSHBruteForceVictim;
-import com.zfac025Project.ProjectCode.Victims.VictimScripts.XSSVictim;
+import com.zfac025Project.ProjectCode.Victims.VictimScripts.DosVictim;
+import com.zfac025Project.ProjectCode.Victims.VictimScripts.MitmVictim;
+import com.zfac025Project.ProjectCode.Victims.VictimScripts.SsHBruteForceVictim;
+import com.zfac025Project.ProjectCode.Victims.VictimScripts.XssVictim;
 
 /**
- * Class that creates an the specified victim script
+ * Class that creates an the specified victim script.
  * @author connormcnulty
  *
  */
 public class VictimFactory {
 
-	SSHBruteForceVictim ssh;
-	MITMVictim mitm;
-	DOSVictim dos;
-	XSSVictim xss;
-	
-	public boolean createVictim(String victim) {
-		if (victim.equals("SSHBruteFoce")) {
-			ssh = new SSHBruteForceVictim();
-			if (ssh.verifyVictim()) {
-				return true;
-			}
-		} else if (victim.equals("ManInTheMiddle")) {
-			mitm = new MITMVictim();
-			if(mitm.verifyVictim()) {
-				return true;
-			}
-		} else if (victim.equals("DenailOfService")) {
-			dos = new DOSVictim();
-			if(dos.verifyVictim()) {
-				return true;
-			}
-		}else if (victim.equals("CrossSiteScripting")) {
-			xss = new XSSVictim();
-			if(xss.verifyVictim()) {
-				return true;
-			}
-		}
-		
-		return true;
-	}
+  SsHBruteForceVictim ssh;
+  MitmVictim mitm;
+  DosVictim dos;
+  XssVictim xss;
+
+  /**
+   * Method to create a victim script depending on the attacker profile.
+   * @param victim String description of the attacker profile
+   * @return
+   */
+  public boolean createVictim(String victim) {
+    if (victim.equals("SSHBruteFoce")) {
+      ssh = new SsHBruteForceVictim();
+      if (ssh.verifyVictim()) {
+        return true;
+      }
+    } else if (victim.equals("ManInTheMiddle")) {
+      mitm = new MitmVictim();
+      if (mitm.verifyVictim()) {
+        return true;
+      }
+    } else if (victim.equals("DenailOfService")) {
+      dos = new DosVictim();
+      if (dos.verifyVictim()) {
+        return true;
+      }
+    } else if (victim.equals("CrossSiteScripting")) {
+      xss = new XssVictim();
+      if (xss.verifyVictim()) {
+        return true;
+      }
+    }
+    return true;
+  }
 
 }
