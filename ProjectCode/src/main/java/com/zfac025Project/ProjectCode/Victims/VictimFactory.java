@@ -6,7 +6,7 @@ public class VictimFactory {
 
 	SSHBruteForceVictim ssh;
 	
-	public boolean verifyStarted(String victim) {
+	public boolean createVictim(String victim) {
 		if (victim.equals("SSHBruteFoce"))
 			ssh = new SSHBruteForceVictim();
 			if (ssh.verifyVictim()) {

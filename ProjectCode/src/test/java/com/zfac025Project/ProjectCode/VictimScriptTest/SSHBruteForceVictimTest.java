@@ -20,7 +20,6 @@ import com.zfac025Project.ProjectCode.Victims.VictimFactory;
 public class SSHBruteForceVictimTest 
 {
 	
-	static WebDriver driver;
 	static GoogleChrome browser;
 	static GoogleChromeOperations operations;
 	static VictimFactory victim;
@@ -41,7 +40,7 @@ public class SSHBruteForceVictimTest
 	@Test
 	@Order(1)
 	public void creationTest() {
-		assertTrue(victim.verifyStarted("SSHBruteFoce"));
+		assertTrue(victim.createVictim("SSHBruteFoce"));
 	}
 	
 	@Test

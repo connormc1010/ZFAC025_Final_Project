@@ -4,9 +4,9 @@ import com.zfac025Project.ProjectCode.Victims.Victim;
 
 public class SSHBruteForceVictim extends Victim{
 
-	public boolean verifyVictim() {
-		// TODO Auto-generated method stub
-		return true;
+	public SSHBruteForceVictim() {
+		this.attack = "SSHBruteForce";
+		this.profile = "Basic";
 	}
 
 }
