@@ -1,13 +1,13 @@
 package com.zfac025Project.ProjectCode.Attackers;
 
 import com.zfac025Project.ProjectCode.Attackers.AttackerScripts.MitmAttacker;
-import com.zfac025Project.ProjectCode.Attackers.AttackerScripts.XssAttacker;
+import com.zfac025Project.ProjectCode.Attackers.AttackerScripts.PhishingAttacker;
 
 
 public class AttackerFactory {
 	
 	MitmAttacker mitm;
-	XssAttacker xss;
+	PhishingAttacker phishing;
 	
 	/**
    * Method to create a attacker script
@@ -21,8 +21,8 @@ public class AttackerFactory {
         return true;
       }
     } else if (attack.equals("CrossSiteScripting")) {
-      xss = new XssAttacker();
-      if (xss.verifyAttack()) {
+      phishing = new PhishingAttacker();
+      if (phishing.verifyAttack()) {
         return true;
       }
     }
