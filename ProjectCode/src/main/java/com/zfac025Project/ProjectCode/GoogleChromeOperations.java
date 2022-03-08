@@ -20,9 +20,17 @@ public class GoogleChromeOperations extends GoogleChrome {
     return true;
   }
 
-  public boolean clickElement(String xpath) {
-    driver.findElements(By.xpath(xpath)).get(0).click();
+  public boolean clickElement(String xpath) throws InterruptedException {
+    WebElement button = driver.findElement(By.xpath(xpath));
+    button.click();
+    Thread.sleep(2000);
     return true;
+  }
+  
+  public boolean clickID(String string) throws InterruptedException {
+	  WebElement button = driver.findElement(By.id(string));
+	  button.click();
+	  return true;
   }
   
   
@@ -39,5 +47,19 @@ public class GoogleChromeOperations extends GoogleChrome {
 		return false;
 	}
   }
+
+public boolean type(String path, String text) {
+	try {
+		WebElement box = driver.findElement(By.xpath(path));
+		Thread.sleep(2000);
+		box.sendKeys(text);
+		Thread.sleep(2000);
+		return true; 
+	}
+	catch(Exception e) {
+		e.printStackTrace();
+		return false;
+		}
+	}
 
 }

@@ -2,7 +2,6 @@ package com.zfac025Project.ProjectCode.Victims;
 
 import com.zfac025Project.ProjectCode.Victims.VictimScripts.DosVictim;
 import com.zfac025Project.ProjectCode.Victims.VictimScripts.MitmVictim;
-import com.zfac025Project.ProjectCode.Victims.VictimScripts.SsHBruteForceVictim;
 import com.zfac025Project.ProjectCode.Victims.VictimScripts.XssVictim;
 
 /**
@@ -12,7 +11,6 @@ import com.zfac025Project.ProjectCode.Victims.VictimScripts.XssVictim;
  */
 public class VictimFactory {
 
-  SsHBruteForceVictim ssh;
   MitmVictim mitm;
   DosVictim dos;
   XssVictim xss;
@@ -23,12 +21,7 @@ public class VictimFactory {
    * @return
    */
   public boolean createVictim(String victim) {
-    if (victim.equals("SSHBruteFoce")) {
-      ssh = new SsHBruteForceVictim();
-      if (ssh.verifyVictim()) {
-        return true;
-      }
-    } else if (victim.equals("ManInTheMiddle")) {
+    if (victim.equals("ManInTheMiddle")) {
       mitm = new MitmVictim();
       if (mitm.verifyVictim()) {
         return true;
