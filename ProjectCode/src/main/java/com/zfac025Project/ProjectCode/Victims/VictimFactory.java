@@ -1,8 +1,6 @@
 package com.zfac025Project.ProjectCode.Victims;
 
 import com.zfac025Project.ProjectCode.Victims.VictimScripts.DosVictim;
-import com.zfac025Project.ProjectCode.Victims.VictimScripts.MitmVictim;
-import com.zfac025Project.ProjectCode.Victims.VictimScripts.XssVictim;
 
 /**
  * Class that creates an the specified victim script.
@@ -11,9 +9,7 @@ import com.zfac025Project.ProjectCode.Victims.VictimScripts.XssVictim;
  */
 public class VictimFactory {
 
-  MitmVictim mitm;
   DosVictim dos;
-  XssVictim xss;
 
   /**
    * Method to create a victim script depending on the attacker profile.
@@ -21,23 +17,17 @@ public class VictimFactory {
    * @return
    */
   public boolean createVictim(String victim) {
-    if (victim.equals("ManInTheMiddle")) {
-      mitm = new MitmVictim();
-      if (mitm.verifyVictim()) {
-        return true;
-      }
-    } else if (victim.equals("DenailOfService")) {
+    if (victim.equals("DDoS")) {
       dos = new DosVictim();
       if (dos.verifyVictim()) {
         return true;
       }
-    } else if (victim.equals("CrossSiteScripting")) {
-      xss = new XssVictim();
-      if (xss.verifyVictim()) {
-        return true;
-      }
+      return false;
+    } else if (victim.equals("ENTER YOUR NEW VICTIM PROFILE")) {
+      return true;
     }
-    return true;
+    return false;
+ 
   }
 
 }

@@ -32,7 +32,6 @@ class mitmAttackerTest {
 	    browser = new GoogleChromeOperations();
 	    operations = new GoogleChromeOperations();
 	    attacker = new AttackerFactory();
-	    assertTrue(GoogleChrome.setUpDriver());
 	  }
 
 	  /**
@@ -41,6 +40,7 @@ class mitmAttackerTest {
 	  @AfterAll
 	  public static void closeChrome() {
 	    assertTrue(browser.quitDriver());
+	    System.out.print("Finished attack");
 	  }
 
 
