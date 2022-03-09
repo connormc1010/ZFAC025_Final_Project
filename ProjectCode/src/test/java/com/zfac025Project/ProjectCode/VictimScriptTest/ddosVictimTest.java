@@ -32,7 +32,6 @@ public class ddosVictimTest {
     browser = new GoogleChromeOperations();
     operations = new GoogleChromeOperations();
     victim = new VictimFactory();
-    assertTrue(GoogleChrome.setUpDriver());
   }
 
   /**
@@ -41,13 +40,15 @@ public class ddosVictimTest {
   @AfterAll
   public static void closeChrome() {
     assertTrue(browser.quitDriver());
+    System.out.print("Finished victim script");
+    
   }
 
 
   @Test
   @Order(1)
   public void creationTest() {
-    assertTrue(victim.createVictim("SSHBruteFoce"));
+    assertTrue(victim.createVictim("DDoS"));
   }
 
   @Test

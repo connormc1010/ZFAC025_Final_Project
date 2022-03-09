@@ -8,8 +8,13 @@ public class Victim extends GoogleChrome {
   protected String profile;
 
   public boolean verifyVictim() {
-    // TODO Auto-generated method stub
-    return true;
+	  if (GoogleChrome.setUpDriver()){
+			System.out.println("Successfully started: "+ attack+" attack");
+			System.out.println("This attack type is: "+ profile);
+			return true;
+		} 
+		System.out.print("Failed to start: "+ attack+" attack");
+		return false;
   }
 
 }
