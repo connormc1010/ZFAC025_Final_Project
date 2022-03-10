@@ -16,7 +16,7 @@ import com.zfac025Project.ProjectCode.Victims.VictimFactory;
  * The victim actions 
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class SSHBruteForceTest {
+public class SSHBruteForceVictimTest {
 
   static GoogleChrome browser;
   static GoogleChromeOperations operations;

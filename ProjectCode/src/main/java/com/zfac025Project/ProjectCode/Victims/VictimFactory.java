@@ -1,6 +1,7 @@
 package com.zfac025Project.ProjectCode.Victims;
 
 import com.zfac025Project.ProjectCode.Victims.VictimScripts.DosVictim;
+import com.zfac025Project.ProjectCode.Victims.VictimScripts.MITMVictim;
 import com.zfac025Project.ProjectCode.Victims.VictimScripts.SniffVictim;
 import com.zfac025Project.ProjectCode.Victims.VictimScripts.SshVictim;
 
@@ -14,6 +15,7 @@ public class VictimFactory {
   SniffVictim sniff;
   SshVictim ssh;
   DosVictim dos;
+  MITMVictim mitm;
  
   
   /**
@@ -28,18 +30,24 @@ public class VictimFactory {
         return true;
       }
       return false;
-    } if (victim.equals("DDoS")) {
+    } else if (victim.equals("DDoS")) {
         dos = new DosVictim();
         if (dos.verifyVictim()) {
           return true;
         }
         return false;
-    } if (victim.equals("SSH")) {
+    } else if (victim.equals("SSH")) {
           ssh = new SshVictim();
           if (ssh.verifyVictim()) {
             return true;
           }
           return false;
+    } else if (victim.equals("MITM")) {
+        mitm = new MITMVictim();
+        if (mitm.verifyVictim()) {
+          return true;
+        }
+        return false;
     } else if (victim.equals("ENTER YOUR NEW VICTIM PROFILE")) {
       return true;
     }
