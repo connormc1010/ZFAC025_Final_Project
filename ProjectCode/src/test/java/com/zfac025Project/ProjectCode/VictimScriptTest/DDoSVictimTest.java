@@ -17,7 +17,7 @@ import org.junit.jupiter.api.TestMethodOrder;
  * The victim actions 
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class ddosVictimTest {
+public class DDoSVictimTest {
 
   static GoogleChrome browser;
   static GoogleChromeOperations operations;
@@ -55,14 +55,14 @@ public class ddosVictimTest {
   @Order(2)
   public void bbcNewsWebsite() {
     assertTrue(operations.getWebsite("https://www.bbc.co.uk"));
-    assertTrue(operations.pageLoaded("header-content"));
+    assertTrue(operations.pageLoaded("/html/body"));
   }
 
   @Test
   @Order(3)
   public void outlook() {
     assertTrue(operations.getWebsite("https://outlook.office.com"));
-    assertTrue(operations.pageLoaded("i0281"));
+    assertTrue(operations.pageLoaded("/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div[2]/div[1]"));
    
   }
 
@@ -70,34 +70,34 @@ public class ddosVictimTest {
   @Order(4)
   public void apple() {
     assertTrue(operations.getWebsite("https://www.apple.com"));
-    assertTrue(operations.pageLoaded("ac-globalnav"));
+    assertTrue(operations.pageLoaded("/html/body/nav"));
   }
   
   @Test
   @Order(5)
   public void cnn() {
 	  assertTrue(operations.getWebsite("https://edition.cnn.com"));
-	  assertTrue(operations.pageLoaded("nav__plain-header"));
+	  assertTrue(operations.pageLoaded("/html/body/div[4]/div/div/header"));
   }
   
   @Test
   @Order(6)
   public void youTube() {
 	  assertTrue(operations.getWebsite("https://www.youtube.com"));
-	  assertTrue(operations.pageLoaded("guide-service"));
+	  assertTrue(operations.pageLoaded("/html/body/ytd-app/div/div/ytd-masthead/div[3]"));
   }
   
   @Test
   @Order(7)
   public void facebook() {
     assertTrue(operations.getWebsite("https://en-gb.facebook.com/"));
-    assertTrue(operations.pageLoaded("content"));
+    assertTrue(operations.pageLoaded("/html/body/div[1]/div[2]/div[1]/div/div/div/div[2]/div/div[1]"));
   }
   
   @Test
   @Order(8)
   public void wikipedia() {
 	  assertTrue(operations.getWebsite("https://en.wikipedia.org/wiki/Main_Page"));
-	  assertTrue(operations.pageLoaded("mw-page-base"));
+	  assertTrue(operations.pageLoaded("/html/body/div[5]/div[1]"));
   }
 }
