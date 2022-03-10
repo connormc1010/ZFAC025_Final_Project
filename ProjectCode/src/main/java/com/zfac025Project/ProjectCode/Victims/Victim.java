@@ -9,7 +9,11 @@ public class Victim extends GoogleChrome {
 
   public boolean verifyVictim() {
 	  if (GoogleChrome.setUpDriver()){
+<<<<<<< HEAD
 			System.out.println("Successfully started: "+ attack+" attack");
+=======
+			System.out.println("Successfully started: "+ attack+" attack \n");
+>>>>>>> restructureFiles
 			System.out.println("This attack type is: "+ profile);
 			return true;
 		} 
