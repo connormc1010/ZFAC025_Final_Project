@@ -34,11 +34,11 @@ public class GoogleChromeOperations extends GoogleChrome {
   }
   
   
-  public boolean pageLoaded(String itemID) {
+  public boolean pageLoaded(String path) {
 	  
 	  try {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-		WebElement item = driver.findElement(By.id(itemID));
+		WebElement item = driver.findElement(By.xpath(path));
 		wait.until(ExpectedConditions.visibilityOf(item));
 		Thread.sleep(5000);
 		return true;
