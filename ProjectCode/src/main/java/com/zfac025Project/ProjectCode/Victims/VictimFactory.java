@@ -2,6 +2,7 @@ package com.zfac025Project.ProjectCode.Victims;
 
 import com.zfac025Project.ProjectCode.Victims.VictimScripts.DosVictim;
 import com.zfac025Project.ProjectCode.Victims.VictimScripts.SniffVictim;
+import com.zfac025Project.ProjectCode.Victims.VictimScripts.SshVictim;
 
 /**
  * Class that creates an the specified victim script.
@@ -10,9 +11,11 @@ import com.zfac025Project.ProjectCode.Victims.VictimScripts.SniffVictim;
  */
 public class VictimFactory {
 
-  
-  DosVictim dos;
   SniffVictim sniff;
+  SshVictim ssh;
+  DosVictim dos;
+ 
+  
   /**
    * Method to create a victim script depending on the attacker profile.
    * @param victim String description of the attacker profile
@@ -31,7 +34,13 @@ public class VictimFactory {
           return true;
         }
         return false;
-      }else if (victim.equals("ENTER YOUR NEW VICTIM PROFILE")) {
+    } if (victim.equals("SSH")) {
+          ssh = new SshVictim();
+          if (ssh.verifyVictim()) {
+            return true;
+          }
+          return false;
+    } else if (victim.equals("ENTER YOUR NEW VICTIM PROFILE")) {
       return true;
     }
     return false;
