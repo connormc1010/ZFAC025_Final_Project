@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.zfac025Project.ProjectCode.VictimScriptTest.SSHBruteForceVictimTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 103.965 s - in com.zfac025Project.ProjectCode.VictimScriptTest.SSHBruteForceVictimTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 92.838 s - in com.zfac025Project.ProjectCode.VictimScriptTest.SSHBruteForceVictimTest
