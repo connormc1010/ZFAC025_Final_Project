@@ -1,6 +1,6 @@
 package com.zfac025Project.ProjectCode.VictimScriptTest;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import com.zfac025Project.ProjectCode.GoogleChrome;
 import com.zfac025Project.ProjectCode.GoogleChromeOperations;

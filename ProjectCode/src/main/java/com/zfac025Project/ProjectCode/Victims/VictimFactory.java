@@ -36,7 +36,7 @@ public class VictimFactory {
           return true;
         }
         return false;
-    } else if (victim.equals("SSH")) {
+    } else if (victim.equals("SSHB")) {
           ssh = new SshVictim();
           if (ssh.verifyVictim()) {
             return true;

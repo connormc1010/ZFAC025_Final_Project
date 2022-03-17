@@ -1,6 +1,6 @@
 package com.zfac025Project.ProjectCode.VictimScriptTest;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
@@ -47,7 +47,7 @@ public class SSHBruteForceVictimTest {
   @Test
   @Order(1)
   public void creationTest() {
-    assertTrue(victim.createVictim("SSH"));
+    assertTrue(victim.createVictim("SSHB"));
   }
 
   @Test

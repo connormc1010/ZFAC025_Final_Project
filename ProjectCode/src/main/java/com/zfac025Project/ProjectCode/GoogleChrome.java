@@ -19,7 +19,7 @@ public abstract class GoogleChrome {
   * @return True if driver was created successfully
   */
   public static Boolean setUpDriver() {
-    System.setProperty("webdriver.chrome.driver", "/Users/connormcnulty/Downloads/chromedriver");
+    System.setProperty("webdriver.chrome.driver", "C:\\Users\\IEUser\\Downloads\\chromedriver_win32\\chromedriver.exe");
     driver = new ChromeDriver();
     driver.manage().window().maximize();
     return true;
